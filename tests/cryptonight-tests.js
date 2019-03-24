@@ -90,19 +90,19 @@ var cnturtlelitevariant2Data = multiHashing['cryptonight-turtle-lite'](xmrigdata
 // Easy fill soft shell data
 var cnsoftshellDatav0 = []
 for (var i = 0; i <= 8192; i += 512) {
-  cnsoftshellDatav0.push({height: i, hash: multiHashing['cryptonight-soft-shell'](xmrigdata, 0, i)})
+  cnsoftshellDatav0.push({ height: i, hash: multiHashing['cryptonight-soft-shell'](xmrigdata, 0, i) })
 }
 
 // Easy fill soft shell data
 var cnsoftshellDatav1 = []
 for (i = 0; i <= 8192; i += 512) {
-  cnsoftshellDatav1.push({height: i, hash: multiHashing['cryptonight-soft-shell'](xmrigdata, 1, i)})
+  cnsoftshellDatav1.push({ height: i, hash: multiHashing['cryptonight-soft-shell'](xmrigdata, 1, i) })
 }
 
 // Easy fill soft shell data
 var cnsoftshellDatav2 = []
 for (i = 0; i <= 8192; i += 512) {
-  cnsoftshellDatav2.push({height: i, hash: multiHashing['cryptonight-soft-shell'](xmrigdata, 2, i)})
+  cnsoftshellDatav2.push({ height: i, hash: multiHashing['cryptonight-soft-shell'](xmrigdata, 2, i) })
 }
 
 console.log('')
