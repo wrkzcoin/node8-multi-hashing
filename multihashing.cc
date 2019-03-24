@@ -2,6 +2,7 @@
 #include <node_buffer.h>
 #include <v8.h>
 #include <stdint.h>
+#include <cstring>
 
 extern "C" {
     #include "argon2.h"
@@ -38,7 +39,6 @@ extern "C" {
 
 using namespace node;
 using namespace v8;
-using namespace std;
 
 #if NODE_MAJOR_VERSION >= 4
 
@@ -581,7 +581,7 @@ DECLARE_FUNC(chukwa) {
     uint32_t input_len = Buffer::Length(target);
 
     uint8_t salt[saltlen];
-    memcpy(salt, input, sizeof(salt));
+    std::memcpy(salt, input, sizeof(salt));
 
     argon2id_hash_raw(iters, memory, threads, input, input_len, salt, saltlen, output, hashlen);
 
